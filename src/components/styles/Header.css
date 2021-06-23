@@ -1,0 +1,30 @@
+.header__wrapper {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.header__logo {
+    margin-left: 48px;
+}
+
+.header__search {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: 39px;
+    padding: 10px;
+}
+
+.header__searchContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    border: 1px solid #31363A;
+    padding: 5px;
+    border-radius: 4px;
+}
