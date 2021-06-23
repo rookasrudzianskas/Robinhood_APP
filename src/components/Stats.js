@@ -90,7 +90,7 @@ const Stats = () => {
                     </div>
                 </div>
 
-                <div className="stats__header">
+                <div className="stats__header stats__lists">
                     <p>Lists</p>
                 </div>
 
