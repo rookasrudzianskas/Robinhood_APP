@@ -1,4 +1,5 @@
 import React from 'react';
+import "./styles/Chip.css";
 
 const Chip = (props) => {
     return (

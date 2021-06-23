@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import "./styles/NewsFeed.css";
 import LineGraph from "./LineGraph";
 import TimeLine from "./TimeLine";
-import {Avatar, Chip} from "@material-ui/core";
-
+import {Avatar} from "@material-ui/core";
+import Chip from "./Chip";
 
 
 const NewsFeed = () => {
@@ -17,7 +17,7 @@ const NewsFeed = () => {
         "Cannabis",
         "Healthcare Supplies",
         "Index ETFs",
-        "Technology",
+        "Technology Movies",
         "China",
         "Pharma",
     ]);
@@ -55,17 +55,13 @@ const NewsFeed = () => {
                         <p>Show More</p>
                     </div>
                     <div className="newsFeed_popularLists_badges">
-                        {popularTopics.map((index, topic) => (
+                        {popularTopics.map((topic) => (
                             // loop per each topic
                             // this goes to the api to get the avatar
                             <Chip
-                                // key={index}
-                                className="topic__badge"
-                                variant="outlined"
+                                key={topic}
                                 label={topic}
-                                avatar={<Avatar
-                                    src={`https://avatars.dicebear.com/api/human/${topic}.svg`}
-                                />}
+                                image={`https://avatars.dicebear.com/api/human/${topic}.svg`}
                             />
                         ))}
                     </div>
