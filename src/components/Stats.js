@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import "./styles/Stats.css";
 import axios from "axios";
+import StatsRow from "./StatsRow";
 
 const Stats = () => {
 
@@ -55,7 +56,9 @@ const Stats = () => {
 
                 <div className="stats__content">
                     <div className="stats__rows">
-
+                        {/*{stockData.map((stock) => (*/}
+                        {/*    <StatsRow key={stock.data.ticker} name={stock.data.ticker} openPrice={stock.data.o} volume={stock.data.share} price={stock.info.c} />*/}
+                        {/*))}*/}
                     </div>
                 </div>
 
@@ -65,7 +68,14 @@ const Stats = () => {
 
                 <div className="stats__content">
                     <div className="stats__rows">
-
+                        {stockData.map((stock) => (
+                            <StatsRow
+                                key={stock.name}
+                                name={stock.name}
+                                openPrice={stock.o}
+                                price={stock.c}
+                            />
+                        ))}
                     </div>
                 </div>
 
