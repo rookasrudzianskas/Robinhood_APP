@@ -63,3 +63,8 @@
 .newsFeed__popularLists__section {
     margin-top:  60px;
 }
+
+.newsFeed_popularLists_badges {
+    display: flex;
+    flex-wrap: wrap;
+}

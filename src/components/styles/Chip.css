@@ -1,0 +1,31 @@
+
+.chip {
+    display: flex;
+    height: 30px;
+    border: 1px solid #31363A;
+    align-items: center;
+    padding: 3px 0;
+    border-radius: 18px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.chip__avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 10px;
+    border: 1px solid #31363A;
+    background-color: #31363A;
+}
+
+.chip__avatar > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.chip__label {
+    padding-right: 10px;
+}
