@@ -1,12 +1,22 @@
 import React from 'react';
 import "./styles/StatsRow.css";
+import {db} from "../firebase";
 
 const StatsRow = (props) => {
 
     const percentage = ((props.price - props.openPrice)/props.openPrice) * 100;
 
     const buyStock = () => {
-
+        db.collection('myStocks').where("ticker", "==", props.name).get().then((querySnapshot) => {
+            // this checks if there is such in the firebase
+            if(!querySnapshot.empty) {
+                querySnapshot.forEach(function (doc) {
+                    console.log(doc.id, " => ", doc.data)
+                });
+            } else {
+                console.log("Not available");
+            }
+        })
     }
 
 
