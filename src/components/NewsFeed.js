@@ -57,6 +57,7 @@ const NewsFeed = () => {
                     <div className="newsFeed_popularLists_badges">
                         {popularTopics.map((topic) => (
                             // loop per each topic
+                            // this goes to the api to get the avatar
                             <Chip
                                 className="topic__badge"
                                 variant="outlined"
