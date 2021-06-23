@@ -47,3 +47,8 @@
     text-decoration: none;
     padding: 0 10px;
 }
+
+.header__menuItems > a:hover {
+    color: #5ac53b;
+    transition: all 0.1s;
+}
