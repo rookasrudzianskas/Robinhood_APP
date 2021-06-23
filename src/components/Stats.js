@@ -8,6 +8,7 @@ const Stats = () => {
 
     const [stockData, setStockData] = useState([]);
     const [myStocks, setMyStocks] = useState([]);
+    console.log(myStocks)
 
     const TOKEN = 'c39f152ad3ieobuuqko0';
     const BASE_URL = 'https://finnhub.io/api/v1/quote';
@@ -24,6 +25,7 @@ const Stats = () => {
                         tempData.push({
                             id: doc.id,
                             data: doc.data(),
+                            // coming from the api call
                             info: res.data,
                         })
                     })
@@ -82,9 +84,9 @@ const Stats = () => {
 
                 <div className="stats__content">
                     <div className="stats__rows">
-                        {/*{stockData.map((stock) => (*/}
-                        {/*    <StatsRow key={stock.data.ticker} name={stock.data.ticker} openPrice={stock.data.o} volume={stock.data.share} price={stock.info.c} />*/}
-                        {/*))}*/}
+                        {myStocks.map((stock) => (
+                            <StatsRow key={stock.data.ticker} name={stock.data.ticker} openPrice={stock.info.o} shares={stock.data.shares} price={stock.info.c} />
+                        ))}
                     </div>
                 </div>
 
@@ -101,6 +103,7 @@ const Stats = () => {
                                 name={stock.name}
                                 openPrice={stock.o}
                                 price={stock.c}
+                                buyItNow={"Buy it now"}
                             />
                         ))}
                     </div>

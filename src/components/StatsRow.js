@@ -11,6 +11,7 @@ const StatsRow = (props) => {
             <div className="row__intro">
                 <h1>{props.name}</h1>
                 <p>{props.shares && (props.shares) + " shares"}</p>
+                <p>{props.buyItNow}</p>
             </div>
             <div className="row__chart">
                 <img src="https://raw.githubusercontent.com/CleverProgrammers/robinhood-clone/69f8244e276928c04fffbd3324ee21c6c82d28e6/src/stock.svg" height={16}/>
