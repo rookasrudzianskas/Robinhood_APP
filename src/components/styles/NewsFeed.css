@@ -3,6 +3,11 @@
     color: #fff;
 }
 
+.newsFeed__chatSection {
+    display: flex;
+    flex-direction: column;
+}
+
 .newsFeed__portfolio {
     text-align: left;
 }
@@ -14,4 +19,8 @@
 .newsFeed__portfolio > p {
     margin-top: 0;
 
+}
+
+.newsFeed__chart {
+    width: 100%;
 }
