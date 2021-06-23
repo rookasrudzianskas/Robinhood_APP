@@ -2,6 +2,10 @@ import React from 'react';
 import "./styles/StatsRow.css";
 
 const StatsRow = (props) => {
+
+    const percentage = ((props.price - props.openPrice)/props.openPrice) * 100;
+
+
     return (
         <div className="row">
             <div className="row__intro">
@@ -12,8 +16,8 @@ const StatsRow = (props) => {
                 <img src="https://raw.githubusercontent.com/CleverProgrammers/robinhood-clone/69f8244e276928c04fffbd3324ee21c6c82d28e6/src/stock.svg" height={16}/>
             </div>
             <div className="row__numbers">
-                <p className="row__price">$200</p>
-                <p className="row__percentage"> +200%</p>
+                <p className="row__price">{props.price}</p>
+                <p className="row__percentage"> +{Number(percentage).toFixed(2)}%</p>
             </div>
         </div>
     );
