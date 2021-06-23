@@ -12,6 +12,13 @@ const Header = () => {
                     <input type="text" placeholder="Search"/>
                 </div>
             </div>
+            <div className="header__menuItems">
+                <a href="#">Free Stocks</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Cash</a>
+                <a href="#">Messages</a>
+                <a href="#">Account</a>
+            </div>
         </div>
     );
 };
