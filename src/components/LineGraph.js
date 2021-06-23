@@ -17,7 +17,7 @@ const LineGraph = () => {
     }];
 
     return (
-        <div className="linegraph">
+        <div>
             <Line
                 data={{
                     datasets: [
@@ -38,6 +38,13 @@ const LineGraph = () => {
                 }}
 
                 options={{
+                    legend: {
+                        display: false,
+                    },
+                    tooltips: {
+                        mode: "index",
+                        intersect: false,
+                    },
                     scales: {
                         yAxes: [{
                             ticks: {
