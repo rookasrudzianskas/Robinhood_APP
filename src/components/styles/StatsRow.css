@@ -6,6 +6,12 @@
     padding: 0 24px;
 }
 
+.row:hover {
+    background-color: #31363A;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
 .row__intro > h1 {
     font-size: 16px;
     font-weight: bold;
