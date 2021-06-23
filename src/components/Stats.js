@@ -16,20 +16,32 @@ const Stats = () => {
 
     useEffect(() => {
         // stocks list
+        let tempStocksData = [];
         const stocksList = ["AAPL", "MSFT", "TSLA", "FB", "BABA", "UBER", "DIS", "SBUX"];
 
         let promises = [];
 
         stocksList.map((stock) => {
+            // goes per each stock, and pushes it to the array
             promises.push(
                 getStockData(stock).then((res) => {
-                    testData.push({
+                    console.log(res);
+                    tempStocksData.push({
                         name: stock,
                         ...res.data
                     });
                 })
             )
         });
+
+        // here we are waiting for all the promises to come up
+        // we have to wait to get each single stock, after that push to the state
+
+        Promise.all(promises).then(()=>{
+            // here we put everything to the one array, and get back to the state
+            setStockData(tempStocksData);
+            console.log(tempStocksData);
+        })
 
     }, []);
 
