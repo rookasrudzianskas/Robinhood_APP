@@ -9,7 +9,7 @@ const StatsRow = (props) => {
                 <p>{props.shares && (props.shares) + " shares"}</p>
             </div>
             <div className="row__chart">
-                {/*<img src={StockChart} height={16}/>*/}
+                <img src="https://raw.githubusercontent.com/CleverProgrammers/robinhood-clone/69f8244e276928c04fffbd3324ee21c6c82d28e6/src/stock.svg" height={16}/>
             </div>
             <div className="row__numbers">
                 <p className="row__price">$200</p>
@@ -25,6 +25,6 @@ export default StatsRow;
 
 // https://raw.githubusercontent.com/CleverProgrammers/robinhood-clone/69f8244e276928c04fffbd3324ee21c6c82d28e6/src/stock2.svg
 
-// negative
+// negative 👇
 
 // https://raw.githubusercontent.com/CleverProgrammers/robinhood-clone/69f8244e276928c04fffbd3324ee21c6c82d28e6/src/negStock.svg

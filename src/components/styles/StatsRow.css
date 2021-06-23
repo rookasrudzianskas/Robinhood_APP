@@ -36,3 +36,7 @@
 .row__percentage {
     color: #5ac53b;
 }
+
+.row__chart {
+    padding: 0 10px;
+}
