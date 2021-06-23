@@ -1,4 +1,18 @@
 .newsFeed {
     flex: 0.7;
     border: 1px solid orange;
+    color: #fff;
+}
+
+.newsFeed__portfolio {
+    text-align: left;
+}
+
+.newsFeed__portfolio > h1 {
+    margin: 0;
+}
+
+.newsFeed__portfolio > p {
+    margin-top: 0;
+
 }
