@@ -12,6 +12,8 @@ const Stats = () => {
     const TOKEN = 'c39f152ad3ieobuuqko0';
     const BASE_URL = 'https://finnhub.io/api/v1/quote';
 
+
+
     const getMyStocks = () => {
         db.collection('myStocks').onSnapshot((snapshot) => {
             let promises = [];
