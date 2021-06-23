@@ -4,7 +4,9 @@ import "./styles/NewsFeed.css";
 const NewsFeed = () => {
     return (
         <div className="newsFeed">
+            <div className="newsFeed__container">
 
+            </div>
         </div>
     );
 };
