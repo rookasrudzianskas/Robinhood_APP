@@ -68,6 +68,7 @@ const Stats = () => {
 
                 <div className="stats__content">
                     <div className="stats__rows">
+                        {/* for each stock we create another component statsRow*/}
                         {stockData.map((stock) => (
                             <StatsRow
                                 key={stock.name}
