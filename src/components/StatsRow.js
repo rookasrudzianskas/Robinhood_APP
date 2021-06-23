@@ -10,10 +10,20 @@ const StatsRow = (props) => {
         db.collection('myStocks').where("ticker", "==", props.name).get().then((querySnapshot) => {
             // this checks if there is such in the firebase
             if(!querySnapshot.empty) {
+
                 querySnapshot.forEach(function (doc) {
-                    console.log(doc.id, " => ", doc.data)
+                    console.log(doc.id, " => ", doc.data);
+
+                    // update the record here
+
+                    db.collection('myStocks').doc(doc.id).update({
+                        shares: doc.data().shares += 1,
+                    })
+
                 });
             } else {
+
+                // add a new record to the database
                 console.log("Not available");
             }
         })
