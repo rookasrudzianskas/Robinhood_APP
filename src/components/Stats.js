@@ -16,9 +16,9 @@ const Stats = () => {
         db.collection('myStocks').onSnapshot((snapshot) => {
             let promises = [];
             let tempData = [];
-
             // firebase stuff to get my stocks
             snapshot.docs.map((doc) => {
+                // going per all the data
                 promises.push(getStockData(doc.data().ticker)
                     .then(res => {
                         tempData.push({
@@ -44,6 +44,7 @@ const Stats = () => {
         // stocks list
         let tempStocksData = [];
         const stocksList = ["AAPL", "MSFT", "TSLA", "FB", "BABA", "UBER", "DIS", "SBUX"];
+        getMyStocks();
 
         let promises = [];
 
