@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import "./styles/Stats.css";
 import axios from "axios";
 import StatsRow from "./StatsRow";
+import {db} from "../firebase";
 
 const Stats = () => {
 
@@ -10,6 +11,28 @@ const Stats = () => {
 
     const TOKEN = 'c39f152ad3ieobuuqko0';
     const BASE_URL = 'https://finnhub.io/api/v1/quote';
+
+    const getMyStocks = () => {
+        db.collection('myStocks').onSnapshot((snapshot) => {
+            let promises = [];
+            let tempData = [];
+
+            // firebase stuff to get my stocks
+            snapshot.docs.map((doc) => {
+                promises.push(getStockData(doc.data().ticker)
+                    .then(res => {
+                        tempData.push({
+                            id: doc.id,
+                            data: doc.data(),
+                            info: res.data,
+                        })
+                    })
+                )})
+            Promise.all(promises).then(()=>{
+                setMyStocks(tempData);
+            })
+        })
+    }
 
     const getStockData = (stock) => {
         return axios.get(`${BASE_URL}?symbol=${stock}&token=${TOKEN}`).catch((error) => {
