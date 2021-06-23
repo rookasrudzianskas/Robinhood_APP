@@ -6,6 +6,8 @@ import StatsRow from "./StatsRow";
 const Stats = () => {
 
     const [stockData, setStockData] = useState([]);
+    const [myStocks, setMyStocks] = useState([]);
+
     const TOKEN = 'c39f152ad3ieobuuqko0';
     const BASE_URL = 'https://finnhub.io/api/v1/quote';
 
