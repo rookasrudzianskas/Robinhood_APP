@@ -12,7 +12,7 @@ const StatsRow = (props) => {
             if(!querySnapshot.empty) {
 
                 querySnapshot.forEach(function (doc) {
-                    console.log(doc.id, " => ", doc.data);
+                    // console.log(doc.id, " => ", doc.data);
 
                     // update the record here
 
@@ -24,7 +24,11 @@ const StatsRow = (props) => {
             } else {
 
                 // add a new record to the database
-                console.log("Not available");
+                // console.log("Not available");
+                db.collection('myStocks').add({
+                    ticker: props.name,
+                    shares: 1,
+                })
             }
         })
     }
