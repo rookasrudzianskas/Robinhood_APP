@@ -9,7 +9,9 @@ function App() {
             </div>
 
             <div className="app__body">
-
+                <div className="app__container">
+                    <NewsFeed />
+                </div>
             </div>
     </div>
   );
