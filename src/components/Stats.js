@@ -1,9 +1,16 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./styles/Stats.css";
 
 const Stats = () => {
 
     const [stockData, setStockData] = useState([]);
+    const TOKEN = 'c39f152ad3ieobuuqko0';
+    const baseURL = 'https://finnhub.io/api/v1/quote';
+
+
+    useEffect(() => {
+
+    }, []);
 
 
     return (
