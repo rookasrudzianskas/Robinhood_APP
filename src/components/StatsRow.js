@@ -25,6 +25,7 @@ const StatsRow = (props) => {
 
                 // add a new record to the database
                 // this works
+                // dONE
                 // console.log("Not available");
                 db.collection('myStocks').add({
                     ticker: props.name,
