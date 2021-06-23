@@ -12,6 +12,8 @@ function App() {
             <div className="app__body">
                 <div className="app__container">
                     <NewsFeed />
+
+                    <Stats />
                 </div>
             </div>
     </div>
