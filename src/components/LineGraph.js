@@ -6,7 +6,15 @@ const LineGraph = () => {
     return (
         <div className="lineGraph">
             <Line
-
+                data={{
+                    datasets: [
+                        {
+                            type:"line",
+                            data: data
+                        }
+                    ]
+                }}
+                type="line"
             />
         </div>
     );
