@@ -1,14 +1,35 @@
 import React, {useEffect, useState} from 'react';
 import "./styles/Stats.css";
+import axios from "axios";
 
 const Stats = () => {
 
     const [stockData, setStockData] = useState([]);
     const TOKEN = 'c39f152ad3ieobuuqko0';
-    const baseURL = 'https://finnhub.io/api/v1/quote';
+    const BASE_URL = 'https://finnhub.io/api/v1/quote';
 
+    const getStockData = (stock) => {
+        return axios.get(`${BASE_URL}?symbol=${stock}&token=${TOKEN}`).catch((error) => {
+            console.log("Error", error.message);
+        })
+    }
 
     useEffect(() => {
+        // stocks list
+        const stocksList = ["AAPL", "MSFT", "TSLA", "FB", "BABA", "UBER", "DIS", "SBUX"];
+
+        let promises = [];
+
+        stocksList.map((stock) => {
+            promises.push(
+                getStockData(stock).then((res) => {
+                    testData.push({
+                        name: stock,
+                        ...res.data
+                    });
+                })
+            )
+        });
 
     }, []);
 
