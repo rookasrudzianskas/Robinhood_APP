@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./styles/Stats.css";
 
 const Stats = () => {
+
+    const [stockData, setStockData] = useState([]);
+
+
     return (
         <div className="stats">
             <div className="stats__container">
@@ -31,3 +35,6 @@ const Stats = () => {
 };
 
 export default Stats;
+
+
+// c39f152ad3ieobuuqko0 finnhub
