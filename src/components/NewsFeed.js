@@ -18,6 +18,39 @@ const NewsFeed = () => {
                         <TimeLine />
                     </div>
                 </div>
+
+                <div className="newsFeed__buying__section">
+                    <h2>Buying Power</h2>
+                    <h2> $4.11</h2>
+                </div>
+
+                <div className="newsFeed__market__section">
+                    <div className="newsFeed__market__box">
+                        <p>Markets Closed</p>
+                        <h1>Happy Thanksgiving</h1>
+                    </div>
+                </div>
+
+                <div className="newsFeed__popularLists__section">
+                    <div className="newsFeed__popularLists__intro">
+                        <h1>Popular lists</h1>
+                        <p>Show More</p>
+                    </div>
+                    <div className="newsFeed_popularLists_badges">
+                        {/*{popularTopics.map((topic) => (*/}
+                        {/*    <Chip*/}
+                        {/*        className="topic__badge"*/}
+                        {/*        variant="outlined"*/}
+                        {/*        label={topic}*/}
+                        {/*        avatar={<Avatar*/}
+                        {/*            src={`https://avatars.dicebear.com/api/human/${topic}.svg`}*/}
+                        {/*        />}*/}
+                        {/*    />*/}
+                        {/*))}*/}
+                    </div>
+                </div>
+
+
             </div>
         </div>
     );

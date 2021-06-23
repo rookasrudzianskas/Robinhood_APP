@@ -24,3 +24,31 @@
 .newsFeed__chart {
     width: 100%;
 }
+
+.newsFeed__buying__section {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #3b4754;
+    padding: 20px 0px 20px 0px;
+}
+
+.newsFeed__market__section {
+
+}
+
+.newsFeed__market__box {
+    height: 10vh;
+    padding: 20px;
+    border: 1px solid #31363A;
+    margin-top: 60px;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.newsFeed__market__box > p {
+    color: #7B858a;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
