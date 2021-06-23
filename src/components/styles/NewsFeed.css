@@ -52,3 +52,14 @@
     font-weight: 700;
     margin-bottom: 8px;
 }
+
+.newsFeed__popularLists__intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px 20px 0px;
+}
+
+.newsFeed__popularLists__section {
+    margin-top:  60px;
+}
