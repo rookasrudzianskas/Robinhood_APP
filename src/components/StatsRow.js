@@ -5,7 +5,7 @@ const StatsRow = (props) => {
     return (
         <div className="row">
             <div className="row__intro">
-                <h1>AAPL</h1>
+                <h1>{props.name}</h1>
                 <p>200 shares</p>
             </div>
             <div className="row__chart">
