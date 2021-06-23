@@ -8,7 +8,6 @@ const Stats = () => {
 
     const [stockData, setStockData] = useState([]);
     const [myStocks, setMyStocks] = useState([]);
-    console.log(myStocks)
 
     const TOKEN = 'c39f152ad3ieobuuqko0';
     const BASE_URL = 'https://finnhub.io/api/v1/quote';
@@ -54,7 +53,6 @@ const Stats = () => {
             // goes per each stock, and pushes it to the array
             promises.push(
                 getStockData(stock).then((res) => {
-                    console.log(res);
                     tempStocksData.push({
                         name: stock,
                         ...res.data
@@ -69,7 +67,6 @@ const Stats = () => {
         Promise.all(promises).then(()=>{
             // here we put everything to the one array, and get back to the state
             setStockData(tempStocksData);
-            console.log(tempStocksData);
         })
 
     }, []);
