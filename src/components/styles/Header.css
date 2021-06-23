@@ -15,16 +15,23 @@
     display: flex;
     align-items: center;
     background-color: black;
-    height: 39px;
+    height: 40px;
     padding: 10px;
 }
 
 .header__searchContainer {
-    display: flex;
-    align-items: center;
-    width: 100%;
+    width: 375px;
     height: 20px;
     border: 1px solid #31363A;
-    padding: 5px;
-    border-radius: 4px;
+    border-radius: 5px;
+}
+
+.header__searchContainer > input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    outline: none;
+    color: #fff;
 }
